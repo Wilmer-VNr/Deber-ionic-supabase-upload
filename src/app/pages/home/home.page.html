@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Cerrar sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="chat-content">
+
+  <div class="messages-container">
+  <div class="message-bubble sent" *ngFor="let message of messages">
+    <div class="message-metadata">{{ message.user_email }}</div>
+
+    <div class="message-content">
+      <div class="message-text">{{ message.content }}</div>
+      <div class="message-time">{{ message.created_at | date:'shortTime' }}</div>
+    </div>
+  </div>
+</div>
+
+ 
+</ion-content>
+<ion-footer> <div class="chat-footer">
+  <input type="text" class="message-input"  [(ngModel)]="newMessage" placeholder="Escribe tu mensaje..." />
+
+  <label for="file-input" class="file-label">📎</label>
+  <input type="file" id="file-input" (change)="uploadFile($event)" hidden />
+  
+  <button class="send-button" (click)="sendMessage()">Enviar</button>
+</div></ion-footer>

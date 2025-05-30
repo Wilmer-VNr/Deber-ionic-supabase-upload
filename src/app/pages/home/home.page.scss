@@ -1,0 +1,187 @@
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  --background: #e5ddd5; // fondo tipo WhatsApp
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Burbujas de mensajes */
+.message-bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 16px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message-bubble.sent {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  border-bottom-right-radius: 0;
+}
+
+.message-bubble.received {
+  align-self: flex-start;
+  background-color: #fff;
+  border-bottom-left-radius: 0;
+}
+
+.message-metadata {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Barra de entrada de texto */
+.chat-footer {
+  --background: #fff;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+  padding: 6px 0;
+}
+
+.chat-toolbar {
+  --padding-start: 8px;
+  --padding-end: 8px;
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #f0f2f5;
+  border-radius: 25px;
+  padding: 6px 10px;
+  gap: 8px;
+}
+
+.message-box {
+  flex: 1;
+  --padding-start: 10px;
+  font-size: 15px;
+  background: transparent;
+}
+
+.icon-button {
+  color: #666;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Barra para subir archivo (opcional) */
+.upload-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.upload-label {
+  color: #444;
+  flex: 1;
+}
+
+
+.chat-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.file-label {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.file-label:hover {
+  background: #e0e0e0;
+}
+
+.send-button {
+  background-color: #4e54c8;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.send-button:hover {
+  background-color: #3d41a5;
+}
+
+
+.message-time {
+  font-size: 11px;
+  color: #888;
+  text-align: right;
+  margin-top: 4px;
+  padding-right: 4px;
+}
+
+.message-bubble {
+  background: #e0e0ff;
+  padding: 10px 14px;
+  border-radius: 14px;
+  max-width: 80%;
+  margin-bottom: 10px;
+  align-self: flex-end;
+  position: relative;
+}
+
+.message-metadata {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.message-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.message-text {
+  font-size: 14px;
+  color: #333;
+  word-break: break-word;
+  flex: 1;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #888;
+  white-space: nowrap;
+  align-self: flex-end;
+}
